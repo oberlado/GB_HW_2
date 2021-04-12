@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet /firstVersion.css/Styles.firstVersion.css?>
+
+
+<VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+      fx:controller="sample.PersonalController">
+    <stylesheets>
+        <URL value="@/styles/style.css"/>
+    </stylesheets>
+    <TextArea fx:id="textArea" VBox.vgrow="ALWAYS" styleClass="field"/>
+    <Button fx:id="btn" text="Send" onAction="#btnClick" styleClass="btn"/>
+</VBox>
