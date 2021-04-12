@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet /firstVersion.css/Styles.firstVersion.css?>
+
+<VBox alignment="center" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegistrationController">
+    <stylesheets>
+        <URL value="@/styles/style.css" />
+    </stylesheets>
+   <children>
+       <TextField fx:id="login" promptText="Login" styleClass="field">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+       <PasswordField fx:id="password" promptText="Password" styleClass="field">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </PasswordField>
+       <TextField fx:id="nickname" promptText="Nickname" styleClass="field">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+       <Button fx:id="signupBtn" onAction="#signUp" styleClass="btn" text="Sign Up" >
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Button>
+       <Label fx:id="resultLabel" visible="false"/>
+   </children>
+</VBox>
