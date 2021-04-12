@@ -1,0 +1,27 @@
+.btn {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-style: solid;
+}
+
+.btn:hover {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.field {
+    -fx-border-color: black;
+}
+
+.field:focused {
+    -fx-border-color: #2b2b2b;
+    -fx-background-color: #f3f3f3;
+}
+
+#chatArea:focused {
+    -fx-background-color: #ffffff;
+}
+
+#chatArea {
+    -fx-border-color: black;
+}
