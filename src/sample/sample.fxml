@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet /styles/style.css?>
+
+
+<?import javafx.geometry.Insets?>
+<VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+      fx:controller="sample.Controller">
+    <stylesheets>
+        <URL value="@/styles/style.css" />
+    </stylesheets>
+    <children>
+
+        <HBox fx:id="upperPanel">
+            <children>
+                <TextField fx:id="loginField" promptText="Login" HBox.hgrow="ALWAYS" styleClass="field"/>
+                <PasswordField fx:id="passwordField" onAction="#tryToAuth" promptText="Password" styleClass="field">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin></PasswordField>
+                <Button onAction="#tryToAuth" styleClass="btn" text="Log in">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin></Button>
+                <Button mnemonicParsing="false" onAction="#logUp" styleClass="btn" text="Log up">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+
+        <HBox VBox.vgrow="ALWAYS">
+            <children>
+                <VBox HBox.hgrow="ALWAYS">
+                    <children>
+                        <TextArea fx:id="chatArea" editable="false" minWidth="300.0" VBox.vgrow="ALWAYS" styleClass="field"/>
+                        <HBox fx:id="bottomPanel" managed="false" visible="false">
+                            <children>
+                                <TextField fx:id="textField" onAction="#sendMsg" promptText="Enter message..." HBox.hgrow="ALWAYS" styleClass="field"/>
+                                <Button onAction="#sendMsg" styleClass="btn" text="Send" />
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </VBox>
+                <ListView fx:id="clientList" minWidth="100" onMouseClicked="#selectClient">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding></ListView>
+                <Label fx:id="userName" styleClass="userLogin" text="userName" />
+            </children>
+        </HBox>
+    </children>
+</VBox>
